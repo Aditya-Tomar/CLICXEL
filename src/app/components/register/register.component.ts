@@ -19,19 +19,19 @@ export class RegisterComponent {
   constructor( private _router: Router, private _fb: FormBuilder){}
 
   public routeToLoginPage(): void {
-    if (typeof Worker !== 'undefined') {
-      // Create a new
-      const worker = new Worker(new URL('../../../app.worker.ts', import.meta.url));
-      worker.onmessage = ({ data }) => {
-        console.log(`page got message: ${data}`);
-      };
-      worker.postMessage(['m','n','c','a','s','d','r','e','w','q','y','t','u','i','o','p']);
-    } else {
-      console.log('no worker run');
-      // Web workers are not supported in this environment.
-      // You should add a fallback so that your program still executes correctly.
-    }
-    // this._router.navigate(['login']);
+    // if (typeof Worker !== 'undefined') {
+    //   // Create a new
+    //   const worker = new Worker(new URL('../../../app.worker.ts', import.meta.url));
+    //   worker.onmessage = ({ data }) => {
+    //     console.log(`page got message: ${data}`);
+    //   };
+    //   worker.postMessage(['m','n','c','a','s','d','r','e','w','q','y','t','u','i','o','p']);
+    // } else {
+    //   console.log('no worker run');
+    //   // Web workers are not supported in this environment.
+    //   // You should add a fallback so that your program still executes correctly.
+    // }
+    this._router.navigate(['login']);
   }
 
   public onSubmit(): void {
