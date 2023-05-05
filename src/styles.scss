@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/icomoon/icomoon.css';
+
+
+button {
+    height: max-content;
+    width: max-content;
+    background-color: white;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: "Arial Narrow", Arial, sans-serif;
+    padding: 16px 20px;
+    border: 0px none transparent;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.icon-camera {
+    color: rgb(112, 200, 112);
+    font-size: 50px;
+    display: flex;
+    text-align: center;
+}
+
+.logo-name {
+    color: black;
+    line-height: 50px;
+    font-weight: 400;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+.m-r-40 {
+    margin-right: 20px;
+}
+.pd-b-15 {
+    padding-bottom: 15px;
+}
+.pd-rl-15 {
+    padding-right: 15px;
+    padding-left: 15px;
+}

@@ -1,0 +1,58 @@
+<ng-container>
+   <div class="background-modal">
+    <div class="background-photo-container">
+        <div class="background-photo-main">
+                <img class="photo-block" src="../../../assets/images/backgroundimage.PNG">
+                <img class="photo-block" src="../../../assets/images/pexels-pixabay-459335.jpg">
+                <img class="photo-block" src="../../../assets/images/pexels-pixabay-459335.jpg">
+                <img class="photo-block" src="../../../assets/images/backgroundimage.PNG">
+                <img class="photo-block" src="../../../assets/images/backgroundimage.PNG">
+                <img class="photo-block" src="../../../assets/images/pexels-pixabay-459335.jpg">
+                <img class="photo-block" src="../../../assets/images/pexels-pixabay-459335.jpg">
+                <img class="photo-block" src="../../../assets/images/backgroundimage.PNG">
+        </div>
+    </div>
+   </div>
+    <div class="header-container">
+        <div class="icon-camera"></div>
+        <div>
+            <span class="new-to-clicxel" (click)="routeToRegisterPage()">New To Clicxel?</span>
+            <button (click)="routeToRegisterPage()">JOIN</button>
+        </div>
+    </div>
+    <div class="overlay">
+        <div class="login-box">
+            <div class="login-header">Welcome back to Clicxel</div>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form">
+                <input class="input-field" 
+                    [ngClass]="{'invalid': !loginForm.email.valid && loginForm.email.touched }" 
+                    placeholder="Email" 
+                    type="text" 
+                    formControlName="email" value=""
+                >
+                
+                <span *ngIf="submitted && ( (!loginForm.email.valid && loginForm.email.touched) || loginForm.email.errors?.required )"
+                    [ngStyle]="{'color':'red', 'margin-bottom': '10px', 'text-align': 'left'}"
+                    >Please enter valid email
+                </span>
+
+                <input class="input-field"
+                    [ngClass]="{'invalid': !loginForm.password.valid && loginForm.password.touched }" 
+                    placeholder="Password" 
+                    type="password" 
+                    formControlName="password" value=""
+                >
+                
+                <span *ngIf="submitted && ( (!loginForm.password.valid && loginForm.password.touched) || loginForm.password.errors?.required )"
+                    [ngStyle]="{'color':'red', 'margin-bottom': '10px', 'text-align': 'left'}"
+                    >Minimum length of password is 6
+                </span>
+                <button class="login-button">Login</button>
+            </form>
+
+            <div [ngStyle]="{cursor: 'pointer', width: 'fit-content', margin: 'auto'}"
+            (click)="forgetPassword()">Forget your password ?</div>
+        </div>
+    </div>
+
+</ng-container>

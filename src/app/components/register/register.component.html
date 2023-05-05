@@ -1,0 +1,58 @@
+<ng-container>
+    <div class="page-header">
+        <div class="icon-camera">
+            <div class="logo-name">Clicxel</div>
+        </div>
+
+        <div class="header-right-content">
+            <div class="have-account" (click)="routeToLoginPage()" >Have an Account?</div>
+            <button (click)="routeToLoginPage()">Sign In</button>
+        </div>
+    </div>
+    <div class="main">
+        <div class="left-panel">
+            <div class="register-container">
+                <div class="signup-form-title">Join the Clicxel community</div>
+                <p class="signup-form-subtitle">Take your photography to the next level. Get it seen by millions.</p>
+                <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="input-group-horizontally">
+                        <div style="margin-right:10px">
+                            <input class="input" type="text" placeholder="First Name" formControlName="fname">
+                        </div>
+                        <div>
+                            <input class="input" type="text" placeholder="Last Name (Optional)" formControlName="lname">
+                        </div>
+                    </div>
+                    <input class="input email-input" type="text" placeholder="Email" formControlName="email">
+                    <input class="input password-input" type="password" placeholder="Password" formControlName="password">
+
+                    <span *ngIf="!form.valid" style="color: red; font-size: 15px">Please fill all the required field</span>
+                    <button class="new-account-button">Create New Account</button>
+                </form>
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="background-photo-container">
+                <!-- <div class="background-photo-main"> -->
+                        <img class="photo-block" src="../../../assets/images/backgroundimage.PNG">
+                        <img class="photo-block" src="../../../assets/images/pexels-pixabay-459335.jpg">
+                        <img class="photo-block" src="../../../assets/images/pexels-pixabay-459335.jpg">
+                        <img class="photo-block" src="../../../assets/images/backgroundimage.PNG">
+                        <img class="photo-block" src="../../../assets/images/backgroundimage.PNG">
+                        <img class="photo-block" src="../../../assets/images/pexels-pixabay-459335.jpg">
+                        <img class="photo-block" src="../../../assets/images/pexels-pixabay-459335.jpg">
+                        <img class="photo-block" src="../../../assets/images/backgroundimage.PNG">
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+
+<!-- 
+<div class="a">
+hjhhhhhhhhhhhhhhhhhhhhhhhhh
+</div>
+<div class="a">
+    dsddsss
+</div> -->
